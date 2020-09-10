@@ -97,6 +97,26 @@ TW_NO_USB_STORAGE := false
 #TW_CRYPTO_MNT_POINT := "/data"
 #TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,formattable,data=ordered"
 
+# Crypto
+TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,barrier=0,data=ordered"
+
+# Storage
+TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+#TW_NO_REBOOT_BOOTLOADER := false
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_NO_USB_STORAGE := false
+TW_INPUT_BLACKLIST := "hbtp_vm"
+HAVE_SELINUX := true
+
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
